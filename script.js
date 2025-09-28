@@ -175,3 +175,13 @@ document.querySelectorAll('.skill-level, .project-card, .timeline-content').forE
 });
 window.addEventListener('scroll', handleScrollAnimation);
 window.addEventListener('load', handleScrollAnimation);
+orEach(el => {
+  el.setAttribute('data-animate', '');
+});
+window.addEventListener('scroll', handleScrollAnimation);
+window.addEventListener('load', handleScrollAnimation);
+orEach(el => {
+  el.setAttribute('data-animate', '');
+});
+window.addEventListener('scroll', handleScrollAnimation);
+window.addEventListener('load', handleScrollAnimation);
