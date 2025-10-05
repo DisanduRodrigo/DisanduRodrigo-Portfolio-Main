@@ -581,6 +581,55 @@ section {
     border-radius: 20px;
     font-size: 0.8rem;
 }
+/* Projects "View all" button */
+.projects-footer {
+  text-align: center;
+  margin-top: 36px;
+}
+
+/* extend existing .btn but style as pill */
+.btn.view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 28px;
+  border-radius: 999px;            /* pill shape */
+  border: 1px solid rgba(44,62,80,0.12);
+  background: rgba(255,255,255,0.95); /* subtle light surface */
+  color: var(--text);
+  box-shadow: 0 8px 20px var(--card-shadow);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+}
+
+/* small icon block on the left */
+.view-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  font-size: 0.95rem;
+  color: var(--secondary);
+}
+
+/* hover state */
+.btn.view-all:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.02);
+  box-shadow: 0 14px 36px rgba(2,6,23,0.12);
+}
+
+/* dark-theme tweak so the button contrasts in dark mode */
+:root[data-theme='dark'] .btn.view-all {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: var(--text);
+}
 
 /* Contact Section */
 #contact {
@@ -744,4 +793,37 @@ footer {
 [data-animate].visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+
+/* Reuse .btn but tweak for CV download */
+.btn.download-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9));
+  color: var(--text);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 20px var(--card-shadow);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn.download-cv .cv-icon {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--surface);
+  font-size: 0.95rem;
+  color: var(--secondary);
+}
+
+.btn.download-cv:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.03);
 }
